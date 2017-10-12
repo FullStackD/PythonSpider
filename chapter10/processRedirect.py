@@ -1,6 +1,5 @@
 from selenium import webdriver
 import time
-from selenium.webdriver.remote.webelement import WebElement
 from selenium.common.exceptions import StaleElementReferenceException
 
 
@@ -19,7 +18,7 @@ def waitForLoad(driver):
             return
 
 
-driver = webdriver.PhantomJS(executable_path='<Path to Phantom Js>')
+driver = webdriver.PhantomJS(executable_path=r"D:\phantomjs-2.1.1-windows\bin\phantomjs.exe")
 driver.get("http://pythonscraping.com/pages/javascript/redirectDemo1.html")
 waitForLoad(driver)
 print(driver.page_source)
